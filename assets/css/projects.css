@@ -1,0 +1,53 @@
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 60vh;
+    display: flex; /* Enables flexbox for layout */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Spreads content across */
+    text-align: left;
+    color: black;
+    overflow: hidden;
+    padding: 0 5%;
+}
+
+/* Background Image (Left Side) */
+.hero-background {
+    width: 50%; /* Occupies left half */
+    height: 100%;
+    background: url("../../images/Uni.png") no-repeat center center;
+    background-size: contain; /* Ensures image is not stretched */
+    background-position: left;
+}
+
+/* Text Content (Right Side) */
+.hero-content {
+    width: 50%; /* Occupies right half */
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Heading and Paragraph */
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #f56a6a;
+}
+
+/* Optional Fade-In Effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
