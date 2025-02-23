@@ -1,30 +1,21 @@
-Editorial by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Personal Website Portfolio - README
 
+## Overview
 
-Say hello to Editorial, a blog/magazine-ish template built around a toggleable "locking"
-sidebar (scroll down to see what I mean) and an accordion-style menu. Not the usual landing
-page/portfolio affair you'd expect to see at HTML5 UP, but I figured for my 41st (!!!)
-template I'd change it up a little. Enjoy :)
+This repository contains the source code for my personal website portfolio. The website showcases my skills, projects, and experience as a [Your Profession, e.g., Full Stack Developer, Graphic Designer, Writer].
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+## Features
 
-(* = not included)
+* **About Me:** A section introducing myself, my background, and my professional journey.
+* **Portfolio/Projects:** A display of my projects, including descriptions, technologies used, and links to live demos or repositories.
+* **Timeline:** A visual timeline of my professional experience and education.
+* **Contact:** Information on how to get in touch with me.
+* **Responsive Design:** The website is designed to be responsive and accessible on various devices and screen sizes.
+* **Smooth Animations:** Uses CSS transitions and JavaScript to provide a polished user experience, including a fade-in timeline effect.
+* **Clean and Minimalist Design:** Focuses on presenting information clearly and effectively.
 
-AJ
-aj@lkn.io | @ajlkn
+## Technologies Used
 
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+* **HTML5:** For structuring the website content.
+* **CSS3:** For styling and layout.
+* **JavaScript:** For interactivity, animations, and dynamic behavior.
