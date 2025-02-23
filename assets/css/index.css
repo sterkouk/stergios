@@ -1,0 +1,70 @@
+.timeline {
+    position: relative;
+    padding: 50px 0 150px;
+    margin: 100px 0 50px;
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 2.5s ease-in-out; /* Add transition */
+}
+
+.timeline.fade-in { /* Class to trigger the animation */
+    opacity: 1;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, #FFD700, #FFA500, #FF4500, #DC143C, #800080, #4B0082);
+    transform: translateY(-50%);
+}
+
+.timeline-item {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.timeline-details {
+    margin-left: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.timeline-details strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Positioning the items horizontally */
+.timeline-item:nth-child(1) {
+    left: 10%;
+}
+
+.timeline-item:nth-child(2) {
+    left: 40%;
+}
+
+.timeline-item:nth-child(3) {
+    left: 70%;
+}
+
+/* Adjusting details position to avoid overlap */
+.timeline-item:nth-child(1) .timeline-details {
+    top: -100px;
+}
+
+.timeline-item:nth-child(2) .timeline-details {
+    top: 50px;
+}
+
+.timeline-item:nth-child(3) .timeline-details {
+    top: -100px;
+}
