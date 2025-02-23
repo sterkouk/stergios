@@ -2,7 +2,7 @@
 window.addEventListener('load', function () {
     const heroSection = document.querySelector('#hero');
     const heroContent = document.querySelector('.hero-content');
-    
+
     // Function to check if the Hero section is in view
     function checkHeroVisibility() {
         if (!heroSection) return; // Exit if hero section doesn't exist
@@ -16,9 +16,9 @@ window.addEventListener('load', function () {
         }
     }
 
-    // Check if the hero section is in view when the page is loaded
+    // Check visibility when the page is loaded
     checkHeroVisibility();
 
-    // Optionally, you can also add a scroll listener to make sure the fade-in happens
+    // Check visibility on scroll
     window.addEventListener('scroll', checkHeroVisibility);
 });
