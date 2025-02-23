@@ -2,14 +2,19 @@
     position: relative;
     padding: 50px 0 150px;
     margin: 100px 0 50px;
-    opacity: 0; /* Start with opacity 0 */
-    transition: opacity 2.5s ease-in-out; /* Add transition */
+    opacity: 0;
+    transition: opacity 2.5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.timeline.fade-in { /* Class to trigger the animation */
+.timeline.fade-in {
     opacity: 1;
 }
 
+/* Default: Horizontal timeline */
 .timeline::before {
     content: '';
     position: absolute;
@@ -22,15 +27,16 @@
 }
 
 .timeline-item {
-    position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
     display: flex;
+    flex-direction: column;
     align-items: center;
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .timeline-details {
-    margin-left: 30px;
+    margin-top: 20px;
     padding: 15px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -38,33 +44,44 @@
     width: 250px;
 }
 
-.timeline-details strong {
-    display: block;
-    margin-bottom: 5px;
-}
+/* === Responsive Portrait Mode === */
+@media (max-width: 768px) and (orientation: portrait) {
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Positioning the items horizontally */
-.timeline-item:nth-child(1) {
-    left: 10%;
-}
+    /* Change timeline to vertical */
+    .timeline::before {
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        right: auto;
+        background: linear-gradient(to bottom, #FFD700, #FFA500, #FF4500, #DC143C, #800080, #4B0082);
+        transform: translateX(-50%);
+    }
 
-.timeline-item:nth-child(2) {
-    left: 40%;
-}
+    .timeline-item {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 
-.timeline-item:nth-child(3) {
-    left: 70%;
-}
+    .timeline-details {
+        width: 80%;
+        margin-left: 20px;
+    }
 
-/* Adjusting details position to avoid overlap */
-.timeline-item:nth-child(1) .timeline-details {
-    top: -100px;
-}
+    /* Alternate left/right positioning for better layout */
+    .timeline-item:nth-child(odd) .timeline-details {
+        margin-left: 30px;
+    }
 
-.timeline-item:nth-child(2) .timeline-details {
-    top: 50px;
-}
-
-.timeline-item:nth-child(3) .timeline-details {
-    top: -100px;
+    .timeline-item:nth-child(even) .timeline-details {
+        margin-left: -30px;
+    }
 }
