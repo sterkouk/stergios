@@ -1,40 +1,42 @@
 /* Hero Section */
 #hero {
     position: relative;
-    height: 60vh;
-    display: flex; /* Enables flexbox for layout */
-    align-items: center; /* Centers items vertically */
-    justify-content: space-between; /* Spreads content across */
+    height: 60vh; /* Ensures it takes enough space */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     text-align: left;
     color: black;
     overflow: hidden;
-    padding: 0 5%;
+    padding: 120px 5% 0; /* Prevents header overlap */
 }
 
 /* Background Image (Left Side) */
 .hero-background {
-    width: 50%; /* Occupies left half */
+    flex: 1;
+    width: 50%;
     height: 100%;
     background: url("../../images/Uni.png") no-repeat center center;
-    background-size: contain; /* Ensures image is not stretched */
+    background-size: contain; /* Ensures the full image is visible */
     background-position: left;
+    background-repeat: no-repeat;
+    display: block !important; /* Ensures visibility */
 }
 
 /* Text Content (Right Side) */
 .hero-content {
-    width: 50%; /* Occupies right half */
+    flex: 1;
+    width: 50%;
     padding: 20px;
     z-index: 1;
 }
-
-/* Heading and Paragraph */
+/* Heading */
 .hero-content h1 {
     font-size: 2.8rem;
     font-weight: bold;
     color: #f56a6a;
 }
 
-/* Optional Fade-In Effect */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -49,5 +51,62 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* === Responsive Portrait Mode Fix === */
+@media (max-width: 768px) and (orientation: portrait) {
+    #hero {
+        flex-direction: column; /* Stack image and text */
+        align-items: center;
+        text-align: center;
+        padding-top: 140px; /* Prevents header overlap */
+        min-height: 80vh;
+    }
+
+    .hero-background {
+        width: 100%;
+        height: 45vh; /* Adjusted to fit large image */
+        background-size: contain; /* Keeps full image visible */
+        background-position: center center; /* Centers image horizontally & vertically */
+        display: flex;
+        justify-content: center; /* Aligns horizontally */
+        align-items: center; /* Aligns vertically */
+    }
+
+    .hero-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* === Responsive Landscape Mode Fix === */
+@media (max-width: 1024px) and (orientation: landscape) {
+    #hero {
+        display: flex;
+        flex-direction: row; /* Keeps image & text side-by-side */
+        min-height: 65vh; /* Adjusted for landscape */
+        padding-top: 100px; /* Avoids header overlap */
+    }
+
+    .hero-background {
+        flex: 1;
+        height: 100%;
+        background-size: contain; /* Ensures entire image is visible */
+        background-position: center;
+        display: block !important;
+    }
+
+    .hero-content {
+        flex: 1;
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 }
