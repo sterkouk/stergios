@@ -40,8 +40,6 @@
 
 .fade-in {
     opacity: 1;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-in-out forwards;
 }
 
 @keyframes fadeInUp {
