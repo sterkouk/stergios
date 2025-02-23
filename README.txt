@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository houses the code for my personal website portfolio. It's designed to showcase my skills, projects, and professional experience as a [Your Profession, e.g., Full Stack Developer, Graphic Designer, Writer].
+This repository contains the source code for my personal website portfolio. It's designed to showcase my skills, projects, and professional experience as a [Your Profession, e.g., Full Stack Developer, Graphic Designer, Writer].
 
 ## Key Features
 
