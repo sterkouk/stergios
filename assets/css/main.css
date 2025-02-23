@@ -2185,6 +2185,39 @@ button,
     #banner .image {
       max-height: 35vh; } }
 
+/* Typing effect  */
+
+/* CSS for typing animation */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+.typing-title {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid #000; /* Cursor effect */
+  width: 0;
+  white-space: nowrap;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+  animation-iteration-count: infinite; /* Loops the animation */
+  animation-timing-function: steps(30); /* Makes the text type character by character */
+}
+
+.typing-title {
+  animation: typing 3s steps(30) 1s infinite alternate, blink 0.75s step-end infinite;
+}
+
 /* Footer */
 #footer .copyright {
   color: #9fa3a6;
@@ -2271,3 +2304,5 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+    
