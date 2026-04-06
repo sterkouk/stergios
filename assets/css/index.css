@@ -35,6 +35,18 @@
     margin-bottom: 40px;
 }
 
+.timeline-item::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #f56a6a;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #f56a6a;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
 .timeline-details {
     margin-top: 20px;
     padding: 15px;
